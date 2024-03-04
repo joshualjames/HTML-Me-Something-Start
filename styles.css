@@ -1,1 +1,231 @@
 /* Write your CSS here! */
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 8px;
+    display: block;
+    background-color: rgb(193, 232, 233);
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#mainHeading {
+    color: red;
+    font-size: 40px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+
+}
+.funParagraph {
+    font-weight: 900;
+    color: green;
+}
+.photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.nonNav{
+    height: 100%;
+    width: 100%;
+   
+}
+
+/* Menu/Nav Bar */
+
+.slide{
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    width: 170px;
+    position: absolute;
+    background-color: black;
+    transition: 0.7s ease;
+    transform: translateX(-180px);
+    z-index: 999;
+    opacity: .85;
+    color: white;
+}
+
+h1{
+    color: purple;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+}
+
+.menuList{
+    list-style-type: none;
+    margin: 0;
+    font-size: larger;
+    font-weight: 500;
+    padding: 12px;
+    display: block;
+    transition: 0.2s ease-out;
+}
+.menuList:hover{
+    color: white;
+    text-decoration:underline;
+    font-weight: bolder;
+}
+
+input{
+    display: none;
+    visibility: hidden;
+}
+
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: black;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .topLine{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middleLine {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottomLine {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .topLine{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked~.toggle .bottomLine {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked~.toggle .middleLine {
+   opacity: 0;
+   transform: translateX(20px);
+}
+
+input:checked~.slide{
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* End Menu/Nav bar */
+
+article{
+    margin: 10px;
+}
+
+/* article::before {
+    content: "";
+    display: block;
+    background: blue;
+    height: 20px;
+    opacity: .33;
+} */
+
+h2 {
+    margin-top: 70px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+/* article::after {
+    content: "";
+    display: block;
+    background: blue;
+    height: 20px;
+    opacity: .33; */
+/* } */
+/* .typed-cursor {
+    opacity: 1;
+    font-weight: 100;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+} */

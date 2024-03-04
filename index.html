@@ -3,33 +3,54 @@
    <head>
       <title>Joshua James</title>
       <meta charset="UTF-8">
-   
+      <link rel="stylesheet" type="text/css" href="./styles.css">
    </head>
    <body>
       <!-- Write your HTML in this file! -->
       <!-- Navigation -->
+      <div class="nonNav"></div>
       <header>
        <label>
+         <input type="checkbox">
+         <div class="toggle">
+            <span class="topLine common"></span>
+            <span class="middleLine common"></span>
+            <span class="bottomLine common"></span>
+         </div>
          <div class="slide">
-            <h1>MENU</h1>
+            <h1 id="mainHeading" style="color:white">MENU</h1>
             <ul>
-               <li>About</li>
-               <li>Work Experience</li>
-               <li>Skills</li>
-               <li>Fun Facts</li>
+               <li class="menuList" onMouseOver="style.backgroundColor='red'" 
+                     onMouseOut="style.backgroundColor=''" ><a href="#about" >About</a></li>
+
+               <li class="menuList" onMouseOver="style.backgroundColor='orange'" 
+                     onMouseOut="style.backgroundColor=''"><a href="#experience">Work Experience</a></li>
+
+               <li class="menuList" onMouseOver="style.backgroundColor='yellow', style.color='black'" 
+                     onMouseOut="style.backgroundColor='', style.color=''"><a href="#skills">Skills</a></li>
+
+               <li class="menuList" onMouseOver="style.backgroundColor='green'" 
+                     onMouseOut="style.backgroundColor=''"><a href="#funFacts">Fun Facts</a></li>
+
+               <li class="menuList" onMouseOver="style.backgroundColor='blue'" 
+                     onMouseOut="style.backgroundColor=''"><a href="#quotes">Inspirational Quotes</a></li>
             </ul>
          </div>
        </label>
+       <script>
+
+       </script>
       </header>
        <!-- Intro -->
    <main>
+      <h2 id="about">About Me</h2>
       <div>
-         <p>Here is some intro text.</p>
+         <p id="testP" class="funParagraph">Here is some intro text.</p>
       </div>
 
        <!-- Work Experience -->
-      
-      <article>
+      <h2 id="experience">Work Experience</h2>
+      <article id="experience">
          <p>job1</p>
          <p>job2</p>
          <p>etc</p>
@@ -37,14 +58,25 @@
       
 
        <!-- Technical Skills -->
-      <article>
+       <h2 id="skills">Skills</h2>
+      <article id="skills" class="typed-cursor">
          <p>Yes, I have some skills...</p>
+      </article>
+
+      <!-- Fun Facts -->
+      <h2 id="funFacts">Fun Facts!</h2>
+      <article id="funFacts">
+         <p>
+            Some extracurricular stuff:
+         </p>
+         <img class="photo" src="images/Rugby.jpg" alt="Josh being lifted for a lineout in rugby">
+         
       </article>
    </main>
        <!-- Quotes -->
        <div>
    <footer>
-         <p>&quot;Inspiration&quot;</p>
+         <p id="quotes">&quot;Inspiration&quot;</p>
    </footer>
       </div>
    </body>
