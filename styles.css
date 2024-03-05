@@ -53,7 +53,9 @@ body {
 }
 
 h1{
-    color: purple;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
     font-weight: 800;
     text-align: right;
     padding: 10px 0;
@@ -149,6 +151,7 @@ input:checked~.slide{
 
 article{
     margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* article::before {
@@ -164,8 +167,24 @@ h2 {
     font-family:'Times New Roman', Times, serif;
 }
 
+a:visited{
+    color: white;
+}
 
+.scrollContainer {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
 
+.scrollContainer img {
+    padding: 20px;
+}
+
+/* .photo{
+
+} */
 /* article::after {
     content: "";
     display: block;

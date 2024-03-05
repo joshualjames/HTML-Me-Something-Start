@@ -2,11 +2,29 @@
 <html>
    <head>
       <title>Joshua James</title>
+      <script>
+         window.addEventListener("load", ()=>{
+            console.log("yay, everything loaded!");
+            let photo = document.getElementById("photos");
+            // let photos = document.getElementsByClassName()
+            photo.addEventListener("mouseover", function (event) {
+               let element = event.target;
+               element.style.height = '320px';
+               element.style.width = '450px'
+            });
+            photo.addEventListener("mouseout", function (event) {
+               let element = event.target;
+               element.style.height = '300px';
+               element.style.width = '430px';
+            })
+         });
+      </script>
       <meta charset="UTF-8">
       <link rel="stylesheet" type="text/css" href="./styles.css">
    </head>
    <body>
       <!-- Write your HTML in this file! -->
+      <h1 style="text-align: center;">Hello, world! It's Joshua James!</h1>
       <!-- Navigation -->
       <div class="nonNav"></div>
       <header>
@@ -32,8 +50,8 @@
                <li class="menuList" onMouseOver="style.backgroundColor='green'" 
                      onMouseOut="style.backgroundColor=''"><a href="#funFacts">Fun Facts</a></li>
 
-               <li class="menuList" onMouseOver="style.backgroundColor='blue'" 
-                     onMouseOut="style.backgroundColor=''"><a href="#quotes">Inspirational Quotes</a></li>
+               <!-- <li class="menuList" onMouseOver="style.backgroundColor='blue'" 
+                     onMouseOut="style.backgroundColor=''"><a href="#quotes">Inspirational Quotes</a></li> -->
             </ul>
          </div>
        </label>
@@ -45,38 +63,62 @@
    <main>
       <h2 id="about">About Me</h2>
       <div>
-         <p id="testP" class="funParagraph">Here is some intro text.</p>
+         <p id="testP" class="funParagraph" style="color:black; line-height:1.5em; font-weight:200; font-family: 'Times New Roman', Times, serif;">
+            After a decade working in the banking industry, I'm ready to spice up my career.
+            I'm in the process of expanding my coding knowledge, with an emphasis on JavaScript, HTML, CSS, and Java. 
+            I'm looking forward to seeing where this adventure takes me!
+         </p>
       </div>
 
        <!-- Work Experience -->
       <h2 id="experience">Work Experience</h2>
       <article id="experience">
-         <p>job1</p>
-         <p>job2</p>
-         <p>etc</p>
+         <p>Senior Operations Analyst: Feb 2021 ~ Present</p>
+         <p>Assistant Financial Center Manager: Feb 2020 ~ Feb 2021</p>
+         <p>Relationship Banker: Jul 2017 ~ Feb 2020</p>
       </article>
       
 
        <!-- Technical Skills -->
-       <h2 id="skills">Skills</h2>
-      <article id="skills" class="typed-cursor">
-         <p>Yes, I have some skills...</p>
+       <h2 id="skills">Skills and Proficiencies</h2>
+      <article style="line-height:1.5em" id="skills" class="typed-cursor">
+         <ul>
+            <li>Data Analysis</li>
+            <li>Data Entry</li>
+            <li>Management</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+         </ul>
       </article>
 
       <!-- Fun Facts -->
       <h2 id="funFacts">Fun Facts!</h2>
-      <article id="funFacts">
+      <article style="line-height:1.5em" id="funFacts">
          <p>
-            Some extracurricular stuff:
+            Some fun facts/interesting things about me:
+            <ul>
+               <li>I play rugby recreationally</li>
+               <li>I love playing Dungeons & Dragons</li>
+               <li>Star Trek is my favorite SciFi series</li>
+            </ul>
          </p>
-         <img class="photo" src="images/Rugby.jpg" alt="Josh being lifted for a lineout in rugby">
-         
+
       </article>
    </main>
        <!-- Quotes -->
        <div>
    <footer>
-         <p id="quotes">&quot;Inspiration&quot;</p>
+         <!-- <p id="quotes">&quot;Inspiration&quot;</p> -->
+      <div class="scrollContainer">
+         <div id="photos">
+            <img style="height:300px; width:430px" src="images/Rugby.jpg" alt="Josh being lifted for a lineout in rugby">
+               <img id="photo2" style="height:300px; width:430px" src="images/dndBeyond.png"
+                     alt="Screenshot of a DnD character sheet.">
+               <img style="height:300px; width:430px" src="images/starTrek.jpg"
+                     alt="Josh wearing a Star Trek tank and doing the Vulcan salute.">
+         </div>
+      </div>
    </footer>
       </div>
    </body>
